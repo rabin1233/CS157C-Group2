@@ -4,6 +4,6 @@
 
 Team Member:
 
-Akshat Bansal 
-Prajesh Shrestha 
-Rabin Gurung
+1. Akshat Bansal 
+2. Prajesh Shrestha 
+3. Rabin Gurung
