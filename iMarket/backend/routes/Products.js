@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const verify = require('./verifyToken');
 const Post = require('../models/Product')
 
 router.get('/', async (req, res)=>{
@@ -12,7 +13,7 @@ router.get('/', async (req, res)=>{
     }
 });
 
-router.post('/', async (req, res)=>{ 
+router.post('/', verify, async (req, res)=>{ 
     const post = new Post({
         title: req.body.title,
         description: req.body.description
