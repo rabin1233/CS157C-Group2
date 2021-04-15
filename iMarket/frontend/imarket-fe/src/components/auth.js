@@ -5,7 +5,7 @@ export default class Auth extends Component {
         return (
             <div>
                 <p>
-                    You are Auth page
+                    You are in Auth page
                 </p>
             </div>
         )
