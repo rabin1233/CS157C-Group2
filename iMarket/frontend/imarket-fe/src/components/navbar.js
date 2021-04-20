@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 
 export default class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <Link to="/" className="navbar-brand">SignIn</Link>
-        <div className="collpase navbar-collapse">
-        <ul className="navbar-nav mr-auto">
-          <li className="navbar-item">
-          <Link to="/" className="nav-link">SignUp</Link>
-          </li>
-        </ul>
+      <div className = "row" className  = "mb-2 pageheading">
+        <div className = "col-sm-12 btn btn-primary">
+            Navbar
         </div>
-      </nav>
+      </div>
     );
   }
 }
