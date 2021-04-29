@@ -4,9 +4,8 @@ import { Button, Card, CardFooter, CardBody, CardGroup, Col, Container, Form, In
 
 class Signup extends Component {
 
-    constructor() {
-        super();
-
+    constructor(props) {
+        super(props);
         this.state = {
             name: '',
             email: '',
@@ -28,7 +27,8 @@ class Signup extends Component {
     }
 
     signup(event) {
-        fetch('http://localhost:4000/auth', {
+        event.preventDefault();
+        fetch('http://localhost:4000/user/register', {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -49,7 +49,9 @@ class Signup extends Component {
                     alert('Sorrrrrry !!!! Un-authenticated User !!!!!')
             })
     }
+    
     render() {
+        console.log(this.state);
         return (
             <div className="app flex-row align-items-center">
                 <Container>
@@ -57,12 +59,9 @@ class Signup extends Component {
                         <Col md="9" lg="7" xl="6">
                             <Card className="mx-4">
                                 <CardBody className="p-4">
-                                    <Form>
-
+                                    <Form onSubmit={this.signup}>
                                         <div className="row" className="mb-2 pageheading">
-                                            <div className="col-sm-12 btn btn-primary">
-                                                Sign Up
-                        </div>
+                                        <h2 style={{textAlign: 'center'}}>Signup</h2>
                                         </div>
                                         <InputGroup className="mb-3">
                                             <Input type="text" onChange={this.name} placeholder="Enter  Your Name" />
@@ -73,7 +72,7 @@ class Signup extends Component {
                                         <InputGroup className="mb-3">
                                             <Input type="password" onChange={this.password} placeholder="Enter Password" />
                                         </InputGroup>
-                                        <Button onClick={this.register} color="success" block>Create Account</Button>
+                                        <Button color="success" block>Create Account</Button>
                                     </Form>
                                 </CardBody>
                             </Card>

@@ -23,8 +23,7 @@ class Login extends Component {
     }
 
     login(event) {
-        debugger;
-        fetch('http://localhost:4000/auth', {
+        fetch(`http://localhost:3001/user/login`, {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -56,9 +55,7 @@ class Login extends Component {
                                     <CardBody>
                                         <Form>
                                             <div className="row" className="mb-2 pageheading">
-                                                <div className="col-sm-12 btn btn-primary">
-                                                    Login
-                                                     </div>
+                                                <h2 style={{textAlign: 'center'}}>Login</h2>
                                             </div>
                                             <InputGroup className="mb-3">
                                                 <Input type="text" onChange={this.email} placeholder="Enter Email" />
