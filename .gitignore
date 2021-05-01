@@ -1,4 +1,3 @@
 ./iMarket/backend/node_modules
 ./iMarket/fronend/node_modules
-node_modules
 .env
