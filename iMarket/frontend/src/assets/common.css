@@ -1,0 +1,18 @@
+.custom_container {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.custom_container_box {
+    padding: 10px 0 40px 0;
+}
+.navbar_nav {
+    margin-left: 10px;
+}
+.navbar_nav_user {
+    margin-right: 20px;
+}
+.form_container {
+    max-width: 400px;
+    margin: 0 auto; /* 0 auto 0 auto*/
+}
