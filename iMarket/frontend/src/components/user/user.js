@@ -1,7 +1,8 @@
-import {useContext} from 'react';
-import MainLayout from 'layout/MainLayout';
+import React,{useContext} from 'react';
 
-import authcontext from 'context/user/authcontext';
+import MainLayout from '../../layout/MainLayout';
+
+import authcontext from '../../context/user/authcontext';
 
 const User = () => {
     const {userData} = useContext(authcontext);

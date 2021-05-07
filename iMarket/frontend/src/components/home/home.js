@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import MainLayout from 'layout/MainLayout';
+import MainLayout from '../../layout/MainLayout';
 
 function Home(){
     return(

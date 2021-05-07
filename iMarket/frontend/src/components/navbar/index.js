@@ -1,9 +1,9 @@
-import {useContext} from 'react';
-import "assets/common.css";
+import React,{useContext} from 'react';
+import '../../assets/common.css';
 import {Link} from 'react-router-dom';
 
-import authcontext from 'context/user/authcontext';
-import Button from 'components/common/Button';
+import authcontext from '../../context/user/authcontext';
+import Button from '../common/Button';
 
 const Navbar = () => {
     const {isLoggedIn, logoutHandle} = useContext(authcontext);

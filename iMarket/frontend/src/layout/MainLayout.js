@@ -1,5 +1,6 @@
 import "../assets/common.css";
-import Navbar from 'components/navbar';
+import React from 'react';
+import Navbar from '../components/navbar/index';
 
 const MainLayout = ({children}) => {
     return (
