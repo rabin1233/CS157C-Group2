@@ -6,10 +6,9 @@ import authcontext from '../../context/user/authcontext';
 
 const User = () => {
     const {userData} = useContext(authcontext);
-    console.log(userData);
     return (
         <MainLayout>
-            User
+            ....
         </MainLayout>
     )
 }

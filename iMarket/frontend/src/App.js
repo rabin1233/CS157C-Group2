@@ -8,6 +8,7 @@ import Home from './components/home/home';
 import User from './components/user/user';
 import AuthContext from './context/user/index';
 import {Protected, Open} from './AuthRoute';
+import UserProfile from './components/user/userprofile';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                 <Open exact path = "/login" component = {Login}/>
                 <Open exact path = "/register" component = {Register}/>
                 <Protected exact path="/account" component ={User} />
+                <Route exact path="/userprofile" component = {UserProfile}/>
             </Switch>
         </BrowserRouter>
       </AuthContext>

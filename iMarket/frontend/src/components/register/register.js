@@ -12,6 +12,7 @@ const initialState = {
     name: '',
     email: '',
     password: '',
+    profileImage:''
 }
 
 const isEmpty = value => {
