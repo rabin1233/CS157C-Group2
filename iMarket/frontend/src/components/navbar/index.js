@@ -28,6 +28,9 @@ const Navbar = () => {
                             <Link className="navbar_nav_user" to="/postitem">
                                 Post
                             </Link>
+                            <Link className="navbar_nav_user" to="/storeitem">
+                                Save Item 
+                            </Link>
                             <Link className="navbar_nav_user" to="/account">
                                 Account
                             </Link>
