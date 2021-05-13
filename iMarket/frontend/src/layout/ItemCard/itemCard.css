@@ -1,0 +1,40 @@
+.rental-desc {
+    height: 3rem;
+    overflow: hidden;
+}
+.rental-card {
+    margin-bottom: 5px;
+}
+
+.rental-footer,
+.card-title-custom {
+    display: flex;
+    justify-content: space-between;
+}
+.card-title-custom .price {
+    color: green;
+    border: 1px solid green;
+    padding: 2px;
+    border-radius: 5px;
+}
+.rental-footer {
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.deleteIcon {
+    color: red;
+    border: 1px solid red;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.deleteIcon:hover {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.199);
+}

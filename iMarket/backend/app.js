@@ -14,7 +14,7 @@ const {verifyToken} = require('./utils/token');
 //dotenv.config();
 var corsOptions = {
     origin: 'http://localhost:3000',
-    methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD'],
+    methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', "DELETE"],
     credentials: true
 }
 
@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 
 const PORT = 3001;
 
-const productsRoute = require('./routes/Products');
+const productsRoute = require('./routes/products');
 const userRoute = require('./routes/auth');
 
 const uri = process.env.DB_CONNECTION;

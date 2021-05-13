@@ -11,7 +11,7 @@ const Navbar = () => {
         <nav className="navbar navbar-light bg-light">
             <div className="container-fluid">
                     <Link className="navbar-brand" to="/">
-                    Bootstrap
+                    iMarket
                     </Link>
                     {!isLoggedIn && (
                         <div>
@@ -25,6 +25,12 @@ const Navbar = () => {
                     )}
                     {isLoggedIn && (
                         <div>
+                            <Link className="navbar_nav_user" to="/postitem">
+                                Post
+                            </Link>
+                            <Link className="navbar_nav_user" to="/storeitem">
+                                Save Item 
+                            </Link>
                             <Link className="navbar_nav_user" to="/account">
                                 Account
                             </Link>

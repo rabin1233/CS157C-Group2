@@ -2,28 +2,38 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component }  from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Register from './components/register/register';
-import Login from './components/login/login';
-import Home from './components/home/home';
-import User from './components/user/user';
-import AuthContext from './context/user/index';
+
+import Register from 'components/register/register';
+import Login from 'components/login/login';
+import Home from 'components/home/home';
+import User from 'components/user/user';
+import PostItem from 'components/postItem/postItem';
+import UserItem from 'components/user/UserItem';
+import StoreItem from 'components/storeItem/storeItem';
+
+import AuthContext from 'context/user';
+import ItemProvider from 'context/data';
 import {Protected, Open} from './AuthRoute';
 import UserProfile from './components/user/userprofile';
 
 function App() {
   return (
       <AuthContext>
-        <BrowserRouter>
-            <Switch>   
-                <Route exact path ="/" component ={Home}/>   
-                <Open exact path = "/login" component = {Login}/>
-                <Open exact path = "/register" component = {Register}/>
-                <Protected exact path="/account" component ={User} />
-                <Route exact path="/userprofile" component = {UserProfile}/>
-            </Switch>
-        </BrowserRouter>
+        <ItemProvider>
+          <BrowserRouter>
+              <Switch>   
+                  <Route exact path ="/" component ={Home}/>   
+                  <Open exact path = "/login" component = {Login}/>
+                  <Open exact path = "/register" component = {Register}/>
+                  <Protected exact path="/account" component ={User} />
+                  <Protected exact path="/postitem" component ={PostItem} />
+                  <Protected exact path="/storeitem" component ={StoreItem} />
+                  <Route exact path = "/items/:userId" component = {UserItem}/>
+              </Switch>
+          </BrowserRouter>
+        </ItemProvider>
       </AuthContext>
-    
+  
   );
 }
 

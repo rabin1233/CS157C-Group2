@@ -1,34 +1,26 @@
-<<<<<<< HEAD
-import React,{useContext} from 'react';
-
-import MainLayout from '../../layout/MainLayout';
-
-import authcontext from '../../context/user/authcontext';
-=======
-import 'components/home/home.css';
-import {useState, useEffect, useContext} from 'react';
-import MainLayout from 'layout/MainLayout';
+import "components/home/home.css";
+import {useState, useEffect} from 'react';
+import {useParams, useLocation} from 'react-router-dom';
+import MainLayout from "layout/MainLayout";
 import ItemCard from 'layout/ItemCard'
 import ItemDetail from 'layout/ItemDetail'
 import Portal from 'components/portal';
 import Button from "components/button";
+
 import axios from 'axios';
-import {useHistory} from "react-router-dom";
-import authcontext from 'context/user/authcontext';
->>>>>>> 755965eb72467352a689ffab3355161eb7e3c087
 
-const API = 'http://localhost:3001/products';
+const API = 'http://localhost:3001/products'
 
-const User = () => {
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
+
+const UserItem = () => {
     const [items, setItems] = useState([]);
-    const {userData} = useContext(authcontext);
-<<<<<<< HEAD
-    return (
-        <MainLayout>
-            ....
-=======
+    const {userId} = useParams();
+    let query = useQuery();
     useEffect(() => {
-        axios.get(`${API}/${userData.id}`, {
+        axios.get(`${API}/${userId}`, {
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -39,26 +31,9 @@ const User = () => {
             console.log(err)
         })
     }, [ ])
-    console.log(items);
     return (
         <MainLayout>
-            <h3 style={{margin: '20px 0'}}>Basic Information</h3>
-            <table className="table table-striped">
-                <tbody>
-                    <tr>
-                    <td>Name</td>
-                    <td>{userData.name}</td>
-                    </tr>
-                    <tr>
-                    <td>Email</td>
-                    <td>{userData.email}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <hr />
-            <h3>
-                Your Items Lists
-            </h3>
+            <h3>Item Posted by {query.get("name")}</h3>
             <div className = "row">
             <div className="flex-container">
                 {items.map((item) => (
@@ -93,10 +68,8 @@ const User = () => {
                 }
             </div>
         </div>
-            
->>>>>>> 755965eb72467352a689ffab3355161eb7e3c087
         </MainLayout>
     )
 }
 
-export default User;
+export default UserItem;
