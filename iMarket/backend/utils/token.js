@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 
+
 exports.signedToken = (userObj) => {
     const signedValue = jwt.sign(userObj, process.env.TOKEN_SECRET);
     return signedValue;

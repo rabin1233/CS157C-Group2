@@ -3,18 +3,18 @@ import React, { Component }  from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import Register from 'components/register/register';
-import Login from 'components/login/login';
-import Home from 'components/home/home';
-import User from 'components/user/user';
-import PostItem from 'components/postItem/postItem';
-import UserItem from 'components/user/UserItem';
-import StoreItem from 'components/storeItem/storeItem';
+import Register from './components/register/register';
+import Login from './components/login/login';
+import Home from './components/home/home';
+import User from './components/user/user';
+import PostItem from './components/postItem/postItem';
+import UserItem from './components/user/UserItem';
+import StoreItem from './components/storeItem/storeItem';
 
-import AuthContext from 'context/user';
-import ItemProvider from 'context/data';
+import AuthContext from './context/user/index';
+import ItemProvider from './context/data/index';
 import {Protected, Open} from './AuthRoute';
-import UserProfile from './components/user/userprofile';
+
 
 function App() {
   return (

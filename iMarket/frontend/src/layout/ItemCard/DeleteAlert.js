@@ -1,7 +1,7 @@
-import {useState, useContext, useEffect} from 'react';
+import React,{useState, useContext, useEffect} from 'react';
 import axios from 'axios';
 
-import datacontext from 'context/data/datacontext';
+import datacontext from '../../context/data/datacontext';
 
 const API = 'http://localhost:3001/products'
 

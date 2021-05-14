@@ -1,32 +1,19 @@
-<<<<<<< HEAD
-import React,{useContext} from 'react';
-
-import MainLayout from '../../layout/MainLayout';
-
-import authcontext from '../../context/user/authcontext';
-=======
-import 'components/home/home.css';
-import {useState, useEffect, useContext} from 'react';
-import MainLayout from 'layout/MainLayout';
-import ItemCard from 'layout/ItemCard'
-import ItemDetail from 'layout/ItemDetail'
-import Portal from 'components/portal';
-import Button from "components/button";
+import '../../assets/home.css';
+import React, {useState, useEffect, useContext} from 'react';
+import MainLayout from "../../layout/MainLayout";
+import ItemCard from '../../layout/ItemCard/index'
+import ItemDetail from '../../layout/ItemDetail/index'
+import Portal from '../portal/index';
+import Button from "../button/index";
 import axios from 'axios';
 import {useHistory} from "react-router-dom";
-import authcontext from 'context/user/authcontext';
->>>>>>> 755965eb72467352a689ffab3355161eb7e3c087
+import authcontext from '../../context/user/authcontext';
 
 const API = 'http://localhost:3001/products';
 
 const User = () => {
     const [items, setItems] = useState([]);
     const {userData} = useContext(authcontext);
-<<<<<<< HEAD
-    return (
-        <MainLayout>
-            ....
-=======
     useEffect(() => {
         axios.get(`${API}/${userData.id}`, {
             headers: {
@@ -94,7 +81,6 @@ const User = () => {
             </div>
         </div>
             
->>>>>>> 755965eb72467352a689ffab3355161eb7e3c087
         </MainLayout>
     )
 }

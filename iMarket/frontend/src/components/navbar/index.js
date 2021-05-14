@@ -34,9 +34,6 @@ const Navbar = () => {
                             <Link className="navbar_nav_user" to="/account">
                                 Account
                             </Link>
-                            <Link className="navbar_nav_user" to="/userprofile">
-                                User Profile
-                            </Link>
                             <Button
                                 size="sm"
                                 color="danger"

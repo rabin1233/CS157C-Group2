@@ -1,11 +1,11 @@
-import "components/home/home.css";
-import {useState, useEffect} from 'react';
+import '../../assets/home.css';
+import React,{useState, useEffect} from 'react';
 import {useParams, useLocation} from 'react-router-dom';
-import MainLayout from "layout/MainLayout";
-import ItemCard from 'layout/ItemCard'
-import ItemDetail from 'layout/ItemDetail'
-import Portal from 'components/portal';
-import Button from "components/button";
+import MainLayout from "../../layout/MainLayout";
+import ItemCard from '../../layout/ItemCard/index'
+import ItemDetail from '../../layout/ItemDetail/index'
+import Portal from '../portal/index';
+import Button from "../button/index";
 
 import axios from 'axios';
 
