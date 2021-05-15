@@ -1,11 +1,11 @@
 import React,{useState, useContext} from 'react';
-import "./home.css"
-import MainLayout from 'layout/MainLayout';
-import datacontext from 'context/data/datacontext';
-import ItemCard from 'layout/ItemCard'
-import ItemDetail from 'layout/ItemDetail'
-import Portal from 'components/portal';
-import Button from "components/button";
+import '../../assets/home.css';
+import MainLayout from '../../layout/MainLayout';
+import datacontext from '../../context/data/datacontext';
+import ItemCard from '../../layout/ItemCard/index'
+import ItemDetail from '../../layout/ItemDetail/index'
+import Portal from '../portal/index';
+import Button from "../button/index";
 
 function Home(){
     const {items} = useContext(datacontext);

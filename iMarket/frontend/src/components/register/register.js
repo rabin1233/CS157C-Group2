@@ -1,17 +1,18 @@
-import "assets/common.css";
+import "../../assets/common.css";
 import React, {useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import axios from 'axios';
 
-import MainLayout from 'layout/MainLayout';
-import FormInput from 'components/common/FormInput';
-import Button from 'components/common/Button';
+import MainLayout from '../../layout/MainLayout';
+import FormInput from '../common/FormInput';
+import Button from '../common/Button';
 
 
 const initialState = {
     name: '',
     email: '',
     password: '',
+    profileImage:''
 }
 
 const isEmpty = value => {

@@ -1,13 +1,13 @@
-import 'components/home/home.css';
-import {useState, useEffect, useContext} from 'react';
-import MainLayout from 'layout/MainLayout';
-import ItemCard from 'layout/ItemCard'
-import ItemDetail from 'layout/ItemDetail'
-import Portal from 'components/portal';
-import Button from "components/button";
+import '../../assets/home.css';
+import React, {useState, useEffect, useContext} from 'react';
+import MainLayout from "../../layout/MainLayout";
+import ItemCard from '../../layout/ItemCard/index'
+import ItemDetail from '../../layout/ItemDetail/index'
+import Portal from '../portal/index';
+import Button from "../button/index";
 import axios from 'axios';
 import {useHistory} from "react-router-dom";
-import authcontext from 'context/user/authcontext';
+import authcontext from '../../context/user/authcontext';
 
 const API = 'http://localhost:3001/products';
 

@@ -1,10 +1,10 @@
-import {useContext} from 'react';
+import React,{useContext} from 'react';
 import './itemCard.css';
 import { AiFillDollarCircle, AiFillDelete } from 'react-icons/ai';
 import {Link} from 'react-router-dom';
-import Portal from 'components/portal';
+import Portal from '../../components/portal/index';
 
-import authcontext from 'context/user/authcontext'
+import authcontext from '../../context/user/authcontext'
 import DeleteAlert from './DeleteAlert';
 
 const ItemCard = ({

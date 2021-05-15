@@ -1,10 +1,10 @@
-import {useState, useContext} from 'react';
-import MainLayout from "layout/MainLayout";
+import React,{useState, useContext} from 'react';
+import MainLayout from "../../layout/MainLayout";
 import axios from 'axios';
 import {useHistory} from "react-router-dom";
 
-import datacontext from 'context/data/datacontext';
-import useUploadImage from 'hooks/useUploadImage';
+import datacontext from '../../context/data/datacontext';
+import useUploadImage from '../../hooks/useUploadImage';
 
 const d = {
     title: '',
